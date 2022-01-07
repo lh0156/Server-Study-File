@@ -1,0 +1,103 @@
+
+Servlet Class 작성 규칙
+
+
+1. 서블릿 클래스 선언(두 가지 방법이 있음)
+	- javax.servlet.Servlet. 인터페이스를 구현한다. > 복잡함
+	- javax.servlet.http.HttpServlet 클래스를 상속 받는다. > 간편함 > 선택
+		* 얘는 javax.servlet.Servlet을 상속 받음. 닥후라고 한다.
+
+
+2. doGet/doPost 메소드 선언
+	- 둘 중 하나 선언 or 둘 다 선언
+	- 클라이언트(브라우저)의 요청이 들어오면 자동으로 호출되는 메소드
+	- 동적으로 HTML 페이지를 만드는 역할
+	- 메소드 작성 규칙
+
+	a. 매개변수 작성(2)
+		1. java.servlet.http.HttpServletRequest
+		2. java.servlet.http.HttpServletResponse
+	b. 예외 미루기
+		1. java.io.IOException
+		2. java.servlet.ServletException
+
+3. 동적 HTML 문서 작성 구현
+
+	- HttpServletResponse 객체의 getWriter() 메소드 호출 > PrintWriter 객체 반환
+- PrintWriter 객체의 printXXX메소드로 ("<html>")를 사용해서 동적으로 코드를 작성한다.
+	
+	* BufferedWriter랑 사용법이 같다고 한다.
+	- 페이지 완성 > 브라우저에게 반환
+	
+4. 브라우저가 서블릿(알바생)을 호출한다.
+
+
+브라우저가 서버에게 페이지(자원)을 요청하는 방식 > Request Method
+
+<form method="POST" action="server.jsp">
+
+1. GET          > 데이터 주세요
+2. POST         > 데이터 줄테니 저장해 주세요. INSERT
+-----------------------------
+3. PUT          > 기존의 데이터 정보 중 일부를 수정해 주세요. > UPDATE
+4. UPDATE       > 기존의 데이터 전체를 수정해 주세요.         > UPDATE
+5. DELETE       > 기존의 데이터를 삭제해 주세요.              > DELETE
+
+- Ex02.java
+- Ex02Ok.java
+
+POST 요청
+1. <form method="POST>
+
+GET 요청
+1. <form method="GET">
+2. <a>
+3. location.href
+4. F5
+5. URL 입력
+
+Servlet 수업 끝~ > 개발 환경이 불편함;;
+
+Servlet -> JSP
+
+2. response
+
+
+3. pageContext
+	- 페이지 실행(요청~응답)중에 관련된 데이터를 저장하는 객체
+	a. 페이지 이동하기
+		- forward()
+	
+	- ex07_pagecontext_one.jsp
+	- ex07_pagecontext_two.jsp
+
+4. out
+	- 응답 페이지 전송을 위한 출력 스트림 객체
+	- 서블릿의 PrintWriter와 같은 역할
+
+	- ex08_out.jsp
+
+5. session(*****)
+	- ex09_session.jsp
+	- ex10_session.jsp
+
+	- ex11_session.jsp
+	- ex11_set.jsp
+	- ex11_del.jsp
+	- ex11_reset.jsp
+	- ex11_interval.jsp
+	
+6. application(*****)
+
+	
+
+
+
+
+
+
+
+
+
+
+﻿
