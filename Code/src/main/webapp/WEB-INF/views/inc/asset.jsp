@@ -3,5 +3,5 @@
 <link rel="stylesheet" href="/code/asset/css/bootstrap.css">
 <link rel="stylesheet" href="/code/asset/css/main.css">
 
-<script src="/code/asset/js/jquery-1.24.js"></script>
+<script src="/code/asset/js/jquery-1.12.4.js"></script>
 <script src="/code/asset/js/bootstrap.js"></script>
