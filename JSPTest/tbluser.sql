@@ -27,7 +27,7 @@ select seq, subject, id, (select name from tblUser where id = tblBoard.id) as na
 -- 게시판 뷰
 create or replace view vwBoard
  as
-    select seq, subject, id, (select name from tblUser where id = tblBoard.id) as name, regdate, readcount,
+    select content, seq, subject, id, (select name from tblUser where id = tblBoard.id) as name, regdate, readcount,
     (sysdate - regdate)as isnew
         from tblBoard;
 
