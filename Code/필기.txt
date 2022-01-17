@@ -53,6 +53,11 @@
 			- DelOk.java(S) > 삭제하기(처리)
 			- BoardDAO.java > DAO
 			- BoardDTO.java > DTO
+			
+			- Addcommentok.java(S) > 댓글쓰기(처리)
+			- CommentDTO.java > DTO (*** 댓글은 게시물의 일종이라 DAO는 따로 만들지 않는다.)
+			- DelCommentOK.java(S) > 댓글삭제(처리)
+			
 		3. com.test.main.member
 			- Member.java(S) > 초기 페이지
 			- Login.java(S) > 로그인(폼)
@@ -116,7 +121,7 @@
 		- 수정하기X
 		- 삭제하기X
 		
-		
+게시물 삭제하기 + 게시물에 댓글이 달렸을 때 > FK 제약사항 
 	
 
 

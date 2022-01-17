@@ -28,10 +28,16 @@ select seq, subject, id, (select name from tblUser where id = tblBoard.id) as na
 create or replace view vwBoard
  as
     select content, seq, subject, id, (select name from tblUser where id = tblBoard.id) as name, regdate, readcount,
-    (sysdate - regdate)as isnew
-        from tblBoard;
+    (sysdate - regdate)as isnew,
+    (select count(*) from tblcomment where bseq = tblboard.seq) as commentcount
+    from tblBoard;
+
+--페이징 작업
+select * from (select rownum as rnum, a.* from (select * from vwBoard order by seq desc) a)
+    where rnum between 1 and 5;
 
 
+select* from tblboard;
 
 
 insert into tblBoard (seq, id, subject, content, regdate, readcount, userip)
@@ -52,3 +58,32 @@ insert into tblBoard (seq, id, subject, content, regdate, readcount, userip)
 commit;
 
 select * from vwBoard order by seq desc;
+
+
+select * from tblUser;
+
+create table tblComment (
+    seq number primary key,                             -- 댓글번호(PK)
+    id varchar2(30) not null references tblUser(id),    -- 작성자(id)
+    content varchar2(1000) not null,                    -- 댓글내용
+    regdate date default sysdate not null,
+    bseq number not null references tblBoard(seq)
+);
+
+create sequence seqComment;
+
+insert into tblComment(seq, id, content, regdate, bseq) values (seqComment.nextVal, 'hong', '댓글입니다', default, 23);
+
+update tblComment set content = '내용 수정' where seq = 3;
+
+delete from tblComment where seq = 2;
+
+select * from tblcomment;
+
+create table tbldoubleTest{
+    double number;
+}
+
+commit;
+
+select count(*) as cnt from vwBoard;
