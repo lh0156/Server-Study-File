@@ -14,6 +14,21 @@ public class BoardDTO {
 	private String name; //작성자 이름
 	private double isnew; //새글 유무
 	
+	private int thread; //계층형
+	private int depth;
+	
+	public int getThread() {
+		return thread;
+	}
+	public void setThread(int thread) {
+		this.thread = thread;
+	}
+	public int getDepth() {
+		return depth;
+	}
+	public void setDepth(int depth) {
+		this.depth = depth;
+	}
 	private int commentcount; //댓글 갯수
 	
 	public int getCommentcount() {
