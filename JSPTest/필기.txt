@@ -247,7 +247,22 @@ JSP Model 2 + EL + JSTL
 
 
 
+JSPTest
 
+- "com.test.openapi" 패키지 생성
+- webapp > WEB-INF > "views" > "openapi" 뷰 폴더 생성
+
+Open API(Application Programming Interface)
+
+공공 데이터 API
+
+
+
+네이버 책 검색 API
+- com.test.openapi > "Book.java"(S)
+- com.test.openapi > "BookDAO.java"
+- com.test.openapi > "BookDTO.java"
+- openapi > "book.jsp"(V)
 
 
 

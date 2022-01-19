@@ -18,7 +18,7 @@
 	<div class="container">
 		<h1 class="page-header"><small></small></h1>
 	
-	<%= ((AddressDTO)request.getAttribute("dto")).getName() %>
+	
 	<!-- 
 	
 		EL, Expression Language
@@ -36,7 +36,7 @@
 	 
 	 <hr>
 	 
-	 <p>이름: <%= ((AddressDTO)request.getAttribute("dto")).getName() %></p>
+	 
 	 <p>이름: ${dto.getName()}</p>
 	 <p>이름: ${dto.Name}</p>
 	 

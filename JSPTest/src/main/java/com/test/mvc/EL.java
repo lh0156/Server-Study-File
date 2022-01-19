@@ -24,7 +24,7 @@ public class EL extends HttpServlet {
 		req.setAttribute("color", "노랑");
 		
 		req.setAttribute("dto", dto);
-		req.setAttribute("list", list);
+		//req.setAttribute("list", list);
 		
 		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/mvc/el.jsp");
