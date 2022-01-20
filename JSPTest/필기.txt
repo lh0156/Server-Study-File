@@ -266,6 +266,28 @@ Open API(Application Programming Interface)
 
 
 
+지도 Open API
+- com.test.openapi > "Map.java"(S)
+- com.test.openapi > "MapDAO.java"
+- com.test.openapi > "MapDTO.java"
+- openapi > "map.jsp"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ﻿
