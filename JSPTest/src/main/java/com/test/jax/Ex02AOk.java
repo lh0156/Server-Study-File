@@ -1,29 +1,26 @@
-package com.test.openapi;
-
+package com.test.jax;
 
 import java.io.IOException;
-import javax.servlet.RequestDispatcher;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/openapi/map.do")
-public class Map extends HttpServlet {
+@WebServlet("/ajax/ex02aok.do")
+public class Ex02AOk extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+		//select
+		AjaxDAO dao = new AjaxDAO();
 		
-		//map.do?01
-		String no = req.getQueryString();
-		if (no == null) no = "";
+		int count = dao.count();
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/openapi/map" + no + ".jsp");
-		dispatcher.forward(req, resp);
+		resp.sendRedirect("/jsp/ajax/ex02a.do?count=" + count);
+		
 	}
 
 }
-
-
-

@@ -274,11 +274,71 @@ Open API(Application Programming Interface)
 
 
 
+- com.test.ajax > "Ex01.java"(S)
+- ajax > "ex01.jsp"
+
+
+
+Ajax, Asynchronous JavaScript and XMl
+- 비동기 JavaScrpit 통신 기술
+- 웹서버와 웹클라이언트간에 Ajax 기술을 사용해서 데이터를 주고받는데
+
+Ajax가 뭡니까?
+1. 자바스크립트 비동기 통신 기법(기술)
+2. 새로고침 없이(깜빡임 없이) 서버와 데이터를 주고받는 기술입니다. > 표면적 특성
+3. 서버와 데이터를 주고 받되 전체 페이지를 주고 받지 않고 필요한 정보만 주고받는 기술
+	> 자원 처리 비용 감소
+	> 트래픽 감소
+	> (클라이언트 입장) 속도 향상
+	> 단점: 개발자 너무 힘들다;;;
+	> 
+	
+	
+
+상황 A. 여태까지의 수업
+- 브라우저(클라이언트)는 서버로부터 웹페이지(HTML)의 전체 소스를 제공받는다.
+- 웹서버(서버) > 브라우저가 욫어한 웹페이지(HTML) 전체 소스를 생성한다.
+
+상황 B. Ajax (브라우저 내에 자바스크립트 객체인 소켓이 있다.)
+- Ajax 객체(클라이언트) > 서버로부터 데이터의 요청 + 제공 받는다.
+- 웹서버(서버) > Ajax 객체가 요청한 데이터를 생성한다.
+ * 손님이 2명 있음. (브라우저, aJax)
+ 
+
+기존 방식 vs Ajax 방식
+- Ex02A.java, ex02a.jsp, "Ex02AOk.java"
+- Ex02B.java, ex02b.jsp, "Ex02BOk.java"
+- AjaxDAO.java, AjaxDTO.java
 
 
 
 
 
+
+
+파일 업로드
+- "com.test.file" > "FileTest.java"(S)
+- views > "file" > "filetest.jsp" // 업로드 폼 페이지
+
+- "com.test.file" > "FileTestOk.java"(S)
+- views > "file" > "filetestOK.jsp" // 업로드 처리 페이지
+
+- 파일 업로드 라이브러리 > cos.jar
+
+
+
+게시판(서비스) 파일 첨부
+1. DB > Table
+	- 컬럼 추가
+		- filename 컬럼
+		- orgfilename 컬럼
+
+2. 첨부 파일 저장 폴더 생성
+	- webapp > files
+	
+3. 업로드 페이지 구현 > add.do
+4. 다운로드 페이지 구현 > view.do
+	
 
 
 

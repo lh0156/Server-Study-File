@@ -1,5 +1,4 @@
-package com.test.openapi;
-
+package com.test.jax;
 
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
@@ -9,21 +8,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/openapi/map.do")
-public class Map extends HttpServlet {
+@WebServlet("/ajax/ex02a.do")
+public class Ex02A extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		//map.do?01
-		String no = req.getQueryString();
-		if (no == null) no = "";
+		String count = req.getParameter("count");
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/openapi/map" + no + ".jsp");
+		req.setAttribute("count", count);
+		
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/ajax/ex02a.jsp");
 		dispatcher.forward(req, resp);
+
 	}
 
 }
-
-
-
