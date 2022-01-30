@@ -54,17 +54,16 @@
 	
 	<script>
 	
-	<% if (result ==1) { %>
-	//성공
-	//alert('추가 성공');
-	location.href = '/jsp/address/list.jsp';
-	<% } else { %>
-	//실패
-	alert('등록 실패;;');
-	//location.href = '/jsp/address/add.jsp';
-	history.back();
-	<% } %>
-	
+		<% if (result == 1) { %>
+		//성공
+		//alert('추가 성공');
+		location.href = '/jsp/address/list.jsp';
+		<% } else { %>		
+		//실패
+		alert('등록 실패;;');
+		//location.href = '/jsp/address/add.jsp';
+		history.back();
+		<% } %>
 	
 	</script>
 </body>

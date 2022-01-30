@@ -21,7 +21,7 @@ public class Download extends HttpServlet {
 		String fileName = request.getParameter("filename");
 		String orgfileName = request.getParameter("orgfilename");
 
-		String savePath = "files"; // webapp > files가 있다고 가정한 파일이다. 경로만 바꾸면 됨
+		String savePath = "files"; //webapp > files
 		
 		ServletContext context = getServletContext();
 		String sDownloadPath = context.getRealPath(savePath);

@@ -1,28 +1,25 @@
 <%@page import="com.test.jdbc.DBUtil"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
 
 	//'hong' > 정보 수정
 	
 	//1. DB 연결
-	
 	Connection conn = null;
 	Statement stat = null;
 	
 	conn = DBUtil.open();
-	
-	//2. SQl
-	String sql = "update tblJava set name = '엄섭윤', age = 25 where id = 'lh0156'";
+		
+	//2. SQL
+	String sql = "update tblJava set name = '홍동길', age = 30 where id = 'hong'";
 	stat = conn.createStatement();
 	int result = stat.executeUpdate(sql);
 	
-	//연결 종료
+	//3. 연결 종료
 	stat.close();
 	conn.close();
-	
 
 %>
 <!DOCTYPE html>
@@ -38,18 +35,25 @@
 <body>
 	<!-- update.jsp -->
 	<div class="container">
-		<h1 class="page-header"><small></small></h1>
-	<% if (result > 0){ %>
-		<div>'test' 계정을 삭제했습니다.</div>
-	<% } else { %>
-		<div>'test' 계정을 삭제를 실패했습니다.</div>
-	<% } %>
-	
+		<h1 class="page-header"> <small></small></h1>
+		
+		<% if (result > 0) { %>
+			<div>수정 성공</div>
+		<% } else { %>
+			<div>수정 실패</div>
+		<% } %>
+			
 	</div>
-
-<script>
-
-</script>
+	
+	<script>
+	
+	</script>
 </body>
-
 </html>
+
+
+
+
+
+
+

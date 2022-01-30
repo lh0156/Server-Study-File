@@ -1,7 +1,6 @@
 package com.test.mvc;
 
 import java.io.IOException;
-import java.sql.ResultSet;
 import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
@@ -11,24 +10,24 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 //Controller > 모든 흐름을 통제(제어)하는 역할
-//			 > 자신은 일을 안함;; > 무조건 다른 객체에게 위임
+//           > 자신은 일을 안함;; > 무조건 다른 객체에게 위임
 @WebServlet("/address.do")
-public class Address extends HttpServlet  {
-	
-	/* Address.java */
+public class Address extends HttpServlet {
+
 	@Override
-	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException{
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	
+		//1. DB 작업 > select
+		//2. ResultSet
+		//3. JSP 호출하기 + ResultSet 전달하기
 		
-		// 1. DB 작업 > select
-		// 2. ResultSet
-		// 3. JSP 호출하기 + ResultSet 전달하기
-		
-		//DB 작업 위임 객체(담당자) > 모델
-		AddressDAO dao = new AddressDAO();
+		//DB 작업 위임 객체(담당자) > Model
+		AddressDAO dao = new AddressDAO(); 
 		
 		//ResultSet rs = dao.list();
-		//req.setAttrivute("rs", rs);
+		//req.setAttribute("rs", rs);
 		
 		ArrayList<AddressDTO> list = dao.list();
 		
@@ -37,7 +36,22 @@ public class Address extends HttpServlet  {
 		
 		//View
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/mvc/address.jsp");
-		dispatcher.forward(req, resp); // pageContext.forward() 동일
+		dispatcher.forward(req, resp);
 		
 	}
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

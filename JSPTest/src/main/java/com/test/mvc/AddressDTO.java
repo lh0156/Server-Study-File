@@ -6,10 +6,8 @@ package com.test.mvc;
 
 //VO, Value Object
 
-
 //- 레코드 1줄을 담는 상자 역할
 public class AddressDTO {
-	/* AddressDTO.java */
 	
 	private String seq;
 	private String name;
@@ -48,4 +46,18 @@ public class AddressDTO {
 		this.address = address;
 	}
 	
+	
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+

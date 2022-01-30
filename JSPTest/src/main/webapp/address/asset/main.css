@@ -1,31 +1,39 @@
+/* main.css */
+
 @font-face {
-    font-family: 'KOTRAHOPE';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2') format('woff2');
+    font-family: 'KyoboHand';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
-body,p,spqn,a,table,th,td,input,textArea,option,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,small,button{
-	font-family:'KOTRAHOPE';
-}
-.contaner{
-	width:600px;
+body, p, div, span, a, table, th, td, input, textarea, option, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, small, button {
+	font-family: 'KyoboHand';
 }
 
-.table.vertical th{
-	width:150px;
-	text-align:center;
-	vertical-align:middle;
+.container {
+	width: 600px;
 }
-.form-control.short{
-	width:100px;
+
+
+.table.vertical th {
+	width: 150px;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #EEE;
 }
-.form-control.middle{
-	width:170px;
+
+.form-control.short {
+	width: 100px;
 }
+
+.form-control.middle {
+	width: 170px;
+}
+
 
 .table.horizontal th {
-	text-align:center;
+	text-align: center;
 	background-color: #EEE;
 }
 
@@ -35,9 +43,17 @@ body,p,spqn,a,table,th,td,input,textArea,option,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,sm
 .table.horizontal th:nth-child(4) { width: 130px; }
 .table.horizontal th:nth-child(5) { width: auto; }
 
-.table.horizontal td {
-	text-align:center;
-	background-color: #EEE;
-}
-
+.table.horizontal td { text-align: center; }
 .table.horizontal td:nth-child(5) { text-align: left; }
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,17 +12,25 @@
 <body>
 	<!-- ex12_two.jsp -->
 	<div class="container">
-		<h1 class="page-header">두번째 페이지<small></small></h1>
-	
-	<p>pageContext b: <%=pageContext.getAttribute("b") %></p>
-	<p>request c: <%=request.getAttribute("c") %></p>
-	<p>session d: <%=session.getAttribute("d") %></p>
-	<p>application e: <%=application.getAttribute("e") %></p>
+		<h1 class="page-header">두번째 페이지 <small></small></h1>
+		
+		<%-- <p>지역변수 a: <%= a %></p> --%>
+		<p>pageContext b: <%= pageContext.getAttribute("b") %></p>
+		<p>request c: <%= request.getAttribute("c") %></p>
+		<p>session d: <%= session.getAttribute("d") %></p>
+		<p>application e: <%= application.getAttribute("e") %></p>
+			
 	</div>
-
-<script>
-
-</script>
+	
+	<script>
+	
+	</script>
 </body>
-
 </html>
+
+
+
+
+
+
+

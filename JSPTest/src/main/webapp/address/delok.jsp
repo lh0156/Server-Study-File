@@ -5,12 +5,10 @@
 <% 
 
 	//1. 데이터 가져오기
-	//2. DB 작업 > insert
+	//2. DB 작업 > delete
 	//3. 피드백
 	
 	//1.
-	
-	
 	String seq = request.getParameter("seq");
 	
 	
@@ -43,7 +41,7 @@
 <body>
 	<!-- template.jsp > addok.jsp -->
 	<div class="container">
-		<h1 class="page-header">주소록 <small>삭제하기</small></h1>
+		<h1 class="page-header">주소록 <small>추가하기</small></h1>
 		
 		
 			
@@ -51,17 +49,15 @@
 	
 	<script>
 	
-	<% if (result ==1) { %>
-	//성공
-	//alert('삭제 성공');
-	location.href = '/jsp/address/list.jsp';
-	<% } else { %>
-	//실패
-	alert('삭제 실패;;');
-	//location.href = '/jsp/address/add.jsp';
-	history.back();
-	<% } %>
-	
+		<% if (result == 1) { %>
+		//성공
+		//alert('삭제 성공');
+		location.href = '/jsp/address/list.jsp';
+		<% } else { %>		
+		//실패
+		alert('삭제 실패;;');
+		history.back();
+		<% } %>
 	
 	</script>
 </body>

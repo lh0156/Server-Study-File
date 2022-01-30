@@ -15,7 +15,7 @@ public class Dummy {
 			PreparedStatement pstat = null;
 			conn = DBUtil.open();
 			
-			String sql = "insert into tblBoard (seq, id, subject, content, regdate, readcount, userip) values (seqBoard.nextVal, ?, ?, ?, default, default, ?)";
+			String sql = "insert into tblBoard (seq, id, subject, content, regdate, readcount, userip, thread, depth) values (seqBoard.nextVal, ?, ?, ?, default, default, ?, (select nvl(max(thread),0) + 1000 from tblBoard) , 0)";
 			pstat = conn.prepareStatement(sql);
 			
 			for (int i=0; i<150; i++) {

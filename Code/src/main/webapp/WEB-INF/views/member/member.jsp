@@ -58,7 +58,7 @@
 						
 					<hr>
 					
-					<form method="POST" action="/code/member/loginok.do">
+					 <form method="POST" action="/code/member/loginok.do">
 						<input type="hidden" name="id" value="hong">
 						<input type="hidden" name="pw" value="1111">
 						<input type="submit" value="홍길동" class="btn btn-default">
@@ -75,7 +75,7 @@
 						<input type="hidden" name="pw" value="1111">
 						<input type="submit" value="관리자" class="btn btn-default">
 					</form>
-					
+					 			
 					</c:if>
 				</div>
 			</div>

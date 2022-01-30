@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,30 +10,34 @@
 </style>
 </head>
 <body>
-
+	<!-- filetestok.jsp -->
 	<div class="container">
-		<h1 class="page-header">파일 업로드 결과 + 파일 다운로드<small></small></h1>
-	
+		<h1 class="page-header">파일 업로드 결과 + 파일 다운로드 <small></small></h1>
+		
 		<div>
-			첨부 파일 다운로드 : (다운로드라고 안쓰면이미지는 그냥 열려버림)
+			첨부 파일 다운로드 : 
 			<a href="/jsp/files/${filename}">${orgfilename}</a>
 		</div>
-		
 		<div>
-			첨부 파일 다운로드 : (다운로드 쓴 것)
+			첨부 파일 다운로드 : 
 			<a href="/jsp/files/${filename}" download>${orgfilename}</a>
 		</div>
-		
 		<div>
 			첨부 파일 다운로드 : 
 			<a href="/jsp/file/download.do?filename=${filename}&orgfilename=${orgfilename}">${orgfilename}</a>
 		</div>
-	
+			
 	</div>
-
-<script>
-
-</script>
+	
+	<script>
+	
+	</script>
 </body>
-
 </html>
+
+
+
+
+
+
+

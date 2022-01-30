@@ -30,7 +30,7 @@
 	String tel = "";
 	String address = "";
 	
-	if (rs.next()){
+	if (rs.next()) {
 		name = rs.getString("name");
 		age = rs.getString("age");
 		tel = rs.getString("tel");
@@ -40,7 +40,7 @@
 	rs.close();
 	stat.close();
 	conn.close();
-	
+
 %>
 <!DOCTYPE html>
 <html>
@@ -62,19 +62,19 @@
 			<table class="table table-bordered vertical">
 				<tr>
 					<th>이름</th>
-					<td><input type="text" name="name" class="form-control short" required value = "<%= name %>"></td>
+					<td><input type="text" name="name" class="form-control short" required value="<%= name %>"></td>
 				</tr>
 				<tr>
 					<th>나이</th>
-					<td><input type="number" name="age" class="form-control short" required value = "<%= age %>"></td>
+					<td><input type="number" name="age" class="form-control short" required value="<%= age %>"></td>
 				</tr>
 				<tr>
 					<th>연락처</th>
-					<td><input type="tel" name="tel" class="form-control middle" required value = "<%= tel %>"></td>
+					<td><input type="tel" name="tel" class="form-control middle" required value="<%= tel %>"></td>
 				</tr>
 				<tr>
 					<th>주소</th>
-					<td><input type="text" name="address" class="form-control" required value = "<%= address %>"></td>
+					<td><input type="text" name="address" class="form-control" required value="<%= address %>"></td>
 				</tr>
 			</table>
 			<div class="btns">
@@ -88,7 +88,7 @@
 				</button>
 			</div>
 			
-			<input type="hidden" name = "seq" value = "<%= seq %>">
+			<input type="hidden" name="seq" value="<%= seq %>">
 			
 		</form>
 			

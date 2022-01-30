@@ -45,25 +45,25 @@
 </style>
 </head>
 <body>
-	<!-- template.jsp > addok.jsp > editok-->
+	<!-- template.jsp > addok.jsp > editok.jsp -->
 	<div class="container">
 		<h1 class="page-header">주소록 <small>추가하기</small></h1>
+		
+		
 			
 	</div>
 	
 	<script>
 	
-	<% if (result ==1) { %>
-	//성공
-	//alert('수정 성공');
-	location.href = '/jsp/address/list.jsp';
-	<% } else { %>
-	//실패
-	alert('수정 실패');
-	//location.href = '/jsp/address/add.jsp';
-	history.back();
-	<% } %>
-	
+		<% if (result == 1) { %>
+		//성공
+		//alert('수정 성공');
+		location.href = '/jsp/address/list.jsp';
+		<% } else { %>		
+		//실패
+		alert('수정 실패;;');
+		history.back();
+		<% } %>
 	
 	</script>
 </body>

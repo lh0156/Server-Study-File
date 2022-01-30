@@ -2,17 +2,17 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <%
 
 	//1. 데이터 가져오기(id, pw)
 	//2. DB 작업 > select
 	//3. 결과
-	//  a. 성공 > 인증 티켓 발급 > 피드백
-	//  b. 실패 > 피드백
+	//	a. 성공 > 인증 티켓 발급 > 피드백
+	// b. 실패 > 피드백
 	
-	//1. 데이터 가져오기
+	//1.
 	String id = request.getParameter("id");
 	String pw = request.getParameter("pw");
 	
@@ -31,22 +31,21 @@
 	rs = stat.executeQuery(sql);
 	
 	if (rs.next()) {
-		// 로그인 성공 > 인증 티켓 발급(****)
+		//로그인 성공 > 인증 티켓 발급(*****)
 		result = true;
 		
-		session.setAttribute("id", id); // 인증 티켓(*******************)
+		session.setAttribute("id", id); //인증 티켓(****************)
 		
-		session.setAttribute("name", rs.getString("name")); // 추가 정보 저장
+		session.setAttribute("name", rs.getString("name")); //추가 정보 저장
 		session.setAttribute("lv", rs.getString("lv"));
 		
 	} else {
-		// 로그인 실패
+		//로그인 실패
 		result = false;
 	}
-	
-	
 
 %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,20 +59,29 @@
 <body>
 	<!-- loginok.jsp -->
 	<div class="container">
-		<h1 class="page-header">로그인 확인<small></small></h1>
-	
-	<%= result %>
-	
+		<h1 class="page-header">로그인 <small></small></h1>
+		
+		<%= result %>
+			
 	</div>
-
-<script>
-	<% if (result) { %>
-		location.href = 'index.jsp';
-	<% } else { %>
-		alert('실패;;');
-		history.back();
-	<% } %>
-</script>
+	
+	<script>
+	
+		<% if (result) { %>
+			location.href = 'index.jsp';
+		<% } else { %>
+			alert('실패;;');
+			history.back();
+		<% } %>
+		
+	
+	</script>
 </body>
-
 </html>
+
+
+
+
+
+
+

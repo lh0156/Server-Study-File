@@ -1,18 +1,18 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%    
-  
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<%
+
 	//1. 인증 티켓 제거
 	//2. 피드백
 	
 	//1.
-	session.removeAttribute("id");
-
+	session.removeAttribute("id"); //인증 티켓 제거 == 로그아웃
+	
 	//2.
 	response.sendRedirect("index.jsp");
-    
-    
-%>    
+
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,13 +26,21 @@
 <body>
 	<!-- logout.jsp -->
 	<div class="container">
-		<h1 class="page-header"><small></small></h1>
-	
+		<h1 class="page-header"> <small></small></h1>
+		
+		
+			
 	</div>
-
-<script>
-
-</script>
+	
+	<script>
+	
+	</script>
 </body>
-
 </html>
+
+
+
+
+
+
+

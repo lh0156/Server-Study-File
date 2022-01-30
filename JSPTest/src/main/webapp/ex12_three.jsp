@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,8 +12,8 @@
 <body>
 	<!-- ex12_three.jsp -->
 	<div class="container">
-		<h1 class="page-header">세번쨰 페이지<small></small></h1>
-	
+		<h1 class="page-header">세번째 페이지 <small></small></h1>
+		
 		<%
 		
 			//1. 지역 변수
@@ -28,18 +27,24 @@
 			
 			//4. session
 			session.setAttribute("num4", 400);
-		
+			
 		%>
-	
+		
 		<div style="border:1px solid black">
 			<%@ include file="inc/ex12_sub.jsp" %>
 		</div>
-	
+			
 	</div>
-
-<script>
-
-</script>
+	
+	<script>
+	
+	</script>
 </body>
-
 </html>
+
+
+
+
+
+
+

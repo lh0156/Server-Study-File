@@ -19,6 +19,8 @@ public class Map extends HttpServlet {
 		String no = req.getQueryString();
 		if (no == null) no = "";
 		
+		
+
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/openapi/map" + no + ".jsp");
 		dispatcher.forward(req, resp);
 	}

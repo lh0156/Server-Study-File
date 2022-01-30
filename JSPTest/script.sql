@@ -1,5 +1,22 @@
 -- D:class/server/JSPTEST/script.sql
 
+--좌표 테이블
+create table tblPoint(
+    seq number primary key,         -- PK
+    name varchar2(100) not null,    -- 장소명
+    lat number not null,            -- 위도
+    lng number not null             -- 경도
+);
+
+create sequence seqPoint;
+
+select * from tblpoint;
+
+
+
+
+
+
 create table tblJava (
     id varchar2(30) primary key,
     name varchar2(30) not null,
@@ -70,3 +87,32 @@ insert into tblBoard (seq, id, subject, content, regdate, readcount, userip)
 commit;
 
 select * from vwBoard order by seq desc;
+
+
+
+
+
+
+
+
+
+-- ex05
+
+create table tblIcon(
+    seq number primary key,
+    icon_id varchar2(30) not null,
+    x number default 0 not null,
+    y number default 0 not null
+);
+
+select * from tblIcon;
+
+insert into tblIcon values (1, 'icon01', default, default);
+insert into tblIcon values (2, 'icon02', default, default);
+insert into tblIcon values (3, 'icon03', default, default);
+insert into tblIcon values (4, 'icon04', default, default);
+insert into tblIcon values (5, 'icon05', default, default);
+
+commit;
+
+

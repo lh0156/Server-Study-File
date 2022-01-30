@@ -12,7 +12,7 @@
 <body>
 	<!-- openapi > map.jsp -->
 	<div class="container">
-		<h1 class="page-header">Map API <small>Kakao Map</small></h1>
+		<h1 class="page-header">Map API <small>Kokao Map</small></h1>
 		
 		<div><input type="button" value="첫번째 지도" class="btn btn-default" onclick="window.open('/jsp/openapi/map.do?01', 'child', '');"></div>
 		

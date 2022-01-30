@@ -42,6 +42,8 @@
 						class="btn btn-primary"
 						onclick="location.href='/code/board/delok.do?seq=${seq}';">
 					
+					
+					
 				</div>
 			</div>
 			

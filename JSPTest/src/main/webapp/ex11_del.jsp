@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,25 +10,29 @@
 </style>
 </head>
 <body>
-
+	<!-- ex11_del.jsp -->
 	<div class="container">
-		<h1 class="page-header">세션값 삭제하기<small></small></h1>
-	
-	<%
-	
-		session.removeAttribute("data");
+		<h1 class="page-header">세션값 삭제하기 <small></small></h1>
 		
-	%>
-	
-	<a href="ex11_session.jsp">돌아가기</a>
-	
-	
-	
+		<%
+		
+			session.removeAttribute("data");
+		
+		%>
+		
+		<a href="ex11_session.jsp">돌아가기</a>
+			
 	</div>
-
-<script>
-
-</script>
+	
+	<script>
+	
+	</script>
 </body>
-
 </html>
+
+
+
+
+
+
+
